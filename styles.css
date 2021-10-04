@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,500;1,400&display=swap');
+
+.bg {
+  min-height: 100%;
+  min-width: 640px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  margin: 0;
+  padding: 0;
+  background-size: 100%;
+  border: none;
+  list-style: none;
+  outline: none;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  max-width: 100%; /*максимальная ширина может иметь другое значение*/
+  margin: 0 auto;
+}
+.text1{
+  margin-top: 150px;
+  font-size: 25px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}
+
+.top-menu {
+  position: fixed;
+  background: #050505;
+  box-shadow: 0px 8px 7px rgba(0,0,0,.3);
+  padding: 20px;
+  margin-left: 0px;
+  top: 0px;
+  width: 100%;
+}
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo {
+
+  position: absolute;
+  float: left;
+}
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.menu-main li {display: inline-block;}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 40px;
+  padding-left: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+  color: #FFFFFF;
+  transition:.1s linear;
+}
+.menu-main a:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  background: #050505;
+  position: absolute;
+  left: 50%;
+  transform: translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+}
+.menu-main a:hover{
+  color: #808080;
+.menu-main a:hover:before {opacity: 1;}
+@media (max-width: 660px) {
+.menu-main {
+  float: none;
+  padding-top: 20px;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.menu-main a {padding: 0 10px;}
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+.menu-main li {display: block;}
+}
